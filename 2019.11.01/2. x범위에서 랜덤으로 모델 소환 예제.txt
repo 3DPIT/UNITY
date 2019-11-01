@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GameRootScript : MonoBehaviour
+{
+    // Start is called before the first frame update
+    public GameObject prefab = null;
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Instantiate(prefab);// 이 메서드는 변수 Prefab 의 변수를 씬에 인스턴스화 시켜주는 것이다.
+                                // prefab 변수에서 만들어진 게임 오브젝트 획득
+
+            GameObject go =
+                    GameObject.Instantiate(this.prefab) as GameObject;
+            //획득한 게임 오브젝트의 설정 변결
+            go.transform.position = new Vector3(Random.Range(-2.0f, 2.0f), 1.0f, 1.0f);
+            //X의 범위를 -2.0 ~2.0 으로 주고 결과를 봐보자
+        }
+    }
+}

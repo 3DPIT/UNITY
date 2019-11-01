@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TitleScript : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            Application.LoadLevel("studyScene");
+        }
+    }
+   void OnGUI()
+    {
+        //화면에 title이라고 표시
+        GUI.Label(new Rect(Screen.width / 2, Screen.height / 2, 128, 32), "title");
+    }
+}
