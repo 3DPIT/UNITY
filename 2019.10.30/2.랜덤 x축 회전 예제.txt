@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+// 난수를 생성하여 위치를 무작위로 이동시키는 예제 
+public class studyScript : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A)){
+            float rnd = Random.Range(0.0f, 5.5f); // 난수 생성
+            this.transform.position = new Vector3(0.0f, 0.0f, rnd);// 캡슐의 위치 변경
+        }
+        if (Input.GetKeyDown(KeyCode.B)){
+            float rnd = Random.Range(0.0f, 360.0f);
+            this.transform.rotation= Quaternion.Euler(rnd, 0.0f, 0.0f);//x축을 기준으로 회전 변경 ,  
+                                                                        //Quaternion.Euler 개념은 마법주문이라고 생각하자
+        }
+    }
+}
