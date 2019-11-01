@@ -1,0 +1,75 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class studyScenes : MonoBehaviour
+{
+    // Start is called before the first frame update//이것도 수정되나?// 되니 2
+    void Start()
+    {
+<<<<<<< Updated upstream
+     //수정 요청 바람   이중 수정 요청 .//수정
+=======
+     //수정 요청 바람   이중 수정 요청//로컬에서 수정바뀜
+>>>>>>> Stashed changes
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.R))
+        {
+            this.transform.Rotate(90.0f * Time.deltaTime, 0.0f, 0.0f);
+        }
+        if (Input.GetKey(KeyCode.L))
+        {
+            this.transform.Rotate(-90.0f * Time.deltaTime, 0.0f, 0.0f);
+        }
+        if (Input.GetKey(KeyCode.P))
+        {
+            GameObject go = GameObject.Find("Cube") as GameObject;
+            go.transform.parent = this.transform;
+        }
+        if (Input.GetKey(KeyCode.N))
+        {
+            GameObject go = GameObject.Find("Cube") as GameObject;
+            go.transform.parent = null;
+        }
+    }
+}
+=======
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class studyScenes : MonoBehaviour// 수정하기
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.R))
+        {
+            this.transform.Rotate(90.0f * Time.deltaTime, 0.0f, 0.0f);
+        }
+        if (Input.GetKey(KeyCode.L))
+        {
+            this.transform.Rotate(-90.0f * Time.deltaTime, 0.0f, 0.0f);
+        }
+        if (Input.GetKey(KeyCode.P))
+        {
+            GameObject go = GameObject.Find("Cube") as GameObject;
+            go.transform.parent = this.transform;
+        }
+        if (Input.GetKey(KeyCode.N))
+        {
+            GameObject go = GameObject.Find("Cube") as GameObject;
+            go.transform.parent = null;
+        }
+    }
+}

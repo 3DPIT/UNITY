@@ -1,0 +1,45 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class cubeScript : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    public void bigSize(){// 다른 스크립트에서도 함수 접근할수 있도록 public
+        this.transform.localScale = new Vector3(3.0f, 3.0f, 3.0f);
+    }
+}
+
+--------------------------------------------------------
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class studyScenes : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.G))
+        {
+            GameObject go = GameObject.Find("Cube") as GameObject;// 오브젝트 찾기
+            go.GetComponent<cubeScript>().bigSize();// 오브젝트에 다른 스크립트 함수 적용
+        }
+    }
+}

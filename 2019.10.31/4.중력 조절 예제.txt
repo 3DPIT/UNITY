@@ -1,0 +1,129 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RigidBodyScript : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            this.transform.GetComponent<Rigidbody>().AddForce(
+                Vector3.forward * 300 * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            this.transform.GetComponent<Rigidbody>().AddForce(
+                Vector3.back * 300 * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            this.transform.GetComponent<Rigidbody>().AddForce(
+                Vector3.right * 300 * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            this.transform.GetComponent<Rigidbody>().AddForce(
+                Vector3.left * 300 * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.U))
+        {
+            this.transform.GetComponent<Rigidbody>().AddForce(
+                Vector3.up * 300 * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            this.transform.GetComponent<Rigidbody>().AddForce(
+                Vector3.down * 300 * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            Physics.gravity = Vector3.zero;
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            Physics.gravity = Vector3.up;
+
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            Physics.gravity = Vector3.down;
+
+        }
+
+
+
+    }
+}
+=======
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class RigidBodyScript : MonoBehaviour
+{
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            this.transform.GetComponent<Rigidbody>().AddForce(
+                Vector3.forward * 300 * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            this.transform.GetComponent<Rigidbody>().AddForce(
+                Vector3.back * 300 * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            this.transform.GetComponent<Rigidbody>().AddForce(
+                Vector3.right * 300 * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            this.transform.GetComponent<Rigidbody>().AddForce(
+                Vector3.left * 300 * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.U))
+        {
+            this.transform.GetComponent<Rigidbody>().AddForce(
+                Vector3.up * 300 * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            this.transform.GetComponent<Rigidbody>().AddForce(
+                Vector3.down * 300 * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.Q))
+        {
+            Physics.gravity = Vector3.zero;
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            Physics.gravity = Vector3.up;
+
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            Physics.gravity = Vector3.down;
+
+        }
+
+
+
+    }
+}
